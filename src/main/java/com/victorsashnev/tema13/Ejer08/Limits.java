@@ -1,4 +1,4 @@
-package com.victorsashnev.tema13.Ejer07;
+package com.victorsashnev.tema13.Ejer08;
 
 public class Limits {
     private final int MAX;
