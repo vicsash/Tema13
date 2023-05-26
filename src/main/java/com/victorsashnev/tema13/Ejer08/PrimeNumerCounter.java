@@ -16,7 +16,7 @@ public class PrimeNumerCounter extends Thread{
     public void run(){
         int div;
         int counter = 0;
-        for(int i = begin; i < end;i++){
+        for(int i = begin; i <= end;i++){
             for(int j = 1 ; j <= begin ;j++){
                 div= i % j;
                 if(div==0){

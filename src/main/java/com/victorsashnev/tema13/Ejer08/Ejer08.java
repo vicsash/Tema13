@@ -25,6 +25,7 @@ public class Ejer08 {
 
             search[i] = new PrimeNumerCounter(aray,lim.get(i).getMIN(),lim.get(i).getMAX());
             search[i].start();
+
         }
         for(int i = 0; i < search.length;i++){
             try {
@@ -36,6 +37,7 @@ public class Ejer08 {
         System.out.println(primCounter);
 
     }
-
+    //contador en cada hilo(thread)
+    //despues cojer el numero con el gettter
 
 }
