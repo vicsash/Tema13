@@ -50,9 +50,17 @@ public class ArrayUtilities <T,R>{
         return aray;
     }
 
-    public static int searchIfReferenceInArray(Object[] T, Object R){
-        for(int i = 0; i <T.length ; i++){
-            if(T[i].equals(R)){
+    public static int searchIfReferenceInArrayInteger(int[] array, int num){
+        for(int i = 0; i <array.length ; i++){
+            if(num == array[i]){
+                return 1;
+            }
+        }
+        return  -1;
+    }
+    public static int searchIfReferenceInArrayString(String[] array, String text){
+        for(int i = 0; i <array.length ; i++){
+            if(array[i].equalsIgnoreCase(text)){
                 return 1;
             }
         }

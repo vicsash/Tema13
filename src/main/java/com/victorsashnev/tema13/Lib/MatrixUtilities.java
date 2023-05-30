@@ -12,16 +12,53 @@ public class MatrixUtilities<T,R> {
         double numb;
         return numb= rand.nextDouble()*max+min;
     }
-     public static int confirmIfelementExists(Object[][] R, Object T){
-            for (int i = 0; i < R.length;i++){
-                for (int j = 0; j < R[i].length;j++){
-                    if(R[i][j].equals(T)){
+     public static int confirmIfelementExistsInteger(int[][] matrix, int num){
+            for (int i = 0; i < matrix.length;i++){
+                for (int j = 0; j < matrix[i].length;j++){
+                    if(matrix[i][j] == num){
                         return 1;
                     }
                 }
             }
         return -1;
      }
+
+    public static int confirmIfelementExistsString(String[][] matrix, String text){
+        for (int i = 0; i < matrix.length;i++){
+            for (int j = 0; j < matrix[i].length;j++){
+                if(matrix[i][j].equalsIgnoreCase(text)){
+                    return 1;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public static String printOutElement(int[][] matrix, int num){
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < matrix.length;i++){
+            for (int j = 0; j < matrix[i].length;j++){
+                if(matrix[i][j] == num){
+                    sb.append(matrix[i][j]);
+                }
+            }
+        }
+        return sb.toString();
+    }
+
+    public static String printOutElement(String[][] matrix, String text){
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < matrix.length;i++){
+            for (int j = 0; j < matrix[i].length;j++){
+                if(matrix[i][j].equalsIgnoreCase(text)){
+                    sb.append(matrix[i][j]);
+                }
+            }
+        }
+        return sb.toString();
+    }
 
      public static String printOutMatrix(Object[][] R){
         StringBuilder sb = new StringBuilder();
