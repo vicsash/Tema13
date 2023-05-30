@@ -6,7 +6,7 @@ import java.sql.SQLOutput;
 
 public class SpaceThread extends Thread{
     private final int num;
-    private final int END =500;
+    private final int END =100;
     Boolean finish = false;
     SpaceThread(String name,int num){
         super(name);
@@ -24,11 +24,20 @@ public class SpaceThread extends Thread{
         do{
             mov = RandomUtilities.randomNumeber(5,0);
             position = position +mov;
-            try {
-                Thread.sleep(200);
+            System.out.print(getName());
+            for(int i = 0; i <position;i++){
+                System.out.print("#");
+            }
+            System.out.print("\r");
+
+
+           try {
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
+            System.out.flush();
         }while(position<=END);
         long endTime = System.currentTimeMillis();
 

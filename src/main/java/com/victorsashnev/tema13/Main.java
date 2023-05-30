@@ -5,11 +5,12 @@ import com.victorsashnev.tema13.Ejer05.Ejer05;
 import com.victorsashnev.tema13.Ejer09.Ejer09;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
     // set deamon
         //Ejer03 ejer03 = new Ejer03();
         //Ejer04 ejer04 = new Ejer04();
         Ejer09 ejer09 = new Ejer09();
+
     }
 
 
